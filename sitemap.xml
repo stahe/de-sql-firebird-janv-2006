@@ -2,38 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://stahe.github.io/de-sql-firebird-janv-2006/index.html</loc>
-         <lastmod>2026-05-26</lastmod>
+         <lastmod>2026-06-20</lastmod>
     </url>
     <url>
          <loc>https://stahe.github.io/de-sql-firebird-janv-2006/beziehungen-zwischen-tabellen.html</loc>
-         <lastmod>2026-05-26</lastmod>
+         <lastmod>2026-06-20</lastmod>
+    </url>
+    <url>
+         <loc>https://stahe.github.io/de-sql-firebird-janv-2006/die-ausdrucke-der-sprache-sql.html</loc>
+         <lastmod>2026-06-20</lastmod>
     </url>
     <url>
          <loc>https://stahe.github.io/de-sql-firebird-janv-2006/einfuhrung-in-die-sprache-sql.html</loc>
-         <lastmod>2026-05-26</lastmod>
+         <lastmod>2026-06-20</lastmod>
     </url>
     <url>
-         <loc>https://stahe.github.io/de-sql-firebird-janv-2006/einleitung.html</loc>
-         <lastmod>2026-05-26</lastmod>
-    </url>
-    <url>
-         <loc>https://stahe.github.io/de-sql-firebird-janv-2006/erweiterte-sql.html</loc>
-         <lastmod>2026-05-26</lastmod>
+         <loc>https://stahe.github.io/de-sql-firebird-janv-2006/einfuhrung.html</loc>
+         <lastmod>2026-06-20</lastmod>
     </url>
     <url>
          <loc>https://stahe.github.io/de-sql-firebird-janv-2006/firebird-tutorial.html</loc>
-         <lastmod>2026-05-26</lastmod>
+         <lastmod>2026-06-20</lastmod>
     </url>
     <url>
-         <loc>https://stahe.github.io/de-sql-firebird-janv-2006/installation-und-verwendung-eines-odbc-treibers-fur-firebird.html</loc>
-         <lastmod>2026-05-26</lastmod>
+         <loc>https://stahe.github.io/de-sql-firebird-janv-2006/installieren-und-verwenden-eines-treibers-odbc-fur-firebird.html</loc>
+         <lastmod>2026-06-20</lastmod>
     </url>
     <url>
-         <loc>https://stahe.github.io/de-sql-firebird-janv-2006/sql-ausdrucke.html</loc>
-         <lastmod>2026-05-26</lastmod>
+         <loc>https://stahe.github.io/de-sql-firebird-janv-2006/vertiefung-der-sprache-sql.html</loc>
+         <lastmod>2026-06-20</lastmod>
     </url>
     <url>
          <loc>https://stahe.github.io/de-sql-firebird-janv-2006/verwaltung-des-gleichzeitigen-zugriffs-auf-daten.html</loc>
-         <lastmod>2026-05-26</lastmod>
+         <lastmod>2026-06-20</lastmod>
     </url>
 </urlset>

@@ -12,7 +12,7 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/de-sql-firebird-janv-2006/einleitung.html">
+        <link rel="canonical" href="https://stahe.github.io/de-sql-firebird-janv-2006/einfuhrung.html">
       
       
         <link rel="prev" href="index.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>1. Einleitung - Einführung in SQL mit dem DBMS Firebird</title>
+        <title>1. Einführung - Einführung in SQL mit dem DBMS Firebird</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-einleitung" class="md-skip">
+        <a href="#1-einfuhrung" class="md-skip">
           Skip to content
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              1. Einleitung
+              1. Einführung
             
           </span>
         </div>
@@ -314,14 +314,14 @@
         
       
       
-      <a href="einleitung.html" class="md-nav__link md-nav__link--active">
+      <a href="einfuhrung.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Einleitung
+    1. Einführung
   
 
     
@@ -396,14 +396,14 @@
   
   
     <li class="md-nav__item">
-      <a href="sql-ausdrucke.html" class="md-nav__link">
+      <a href="die-ausdrucke-der-sprache-sql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. SQL-Ausdrücke
+    4. Die Ausdrücke der Sprache SQL
   
 
     
@@ -450,14 +450,14 @@
   
   
     <li class="md-nav__item">
-      <a href="erweiterte-sql.html" class="md-nav__link">
+      <a href="vertiefung-der-sprache-sql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Erweiterte SQL
+    6. Vertiefung der Sprache SQL
   
 
     
@@ -504,14 +504,14 @@
   
   
     <li class="md-nav__item">
-      <a href="installation-und-verwendung-eines-odbc-treibers-fur-firebird.html" class="md-nav__link">
+      <a href="installieren-und-verwenden-eines-treibers-odbc-fur-firebird.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Installation und Verwendung eines ODBC-Treibers für [Firebird]
+    8. Installieren und Verwenden eines Treibers ODBC für [Firebird]
   
 
     
@@ -541,13 +541,14 @@
 
 
 
-<h1 id="1-einleitung">1. <span style="color: #365f91">Einleitung</span></h1>
-<p>Das PDF dieses Dokuments ist |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQCbWs6xMBdwSqveJVcDiZJJAVUZuBLrJsp8QZaMhmuZDeg?e=C5nF6a">HIER</a>| verfügbar.</p>
-<p>Dieses Dokument basiert auf einem ähnlichen Dokument, das 1991 für Oracle verfasst wurde, und passt es an das Firebird-DBMS an. Im Jahr 1991 stammte der Kerninhalt des Dokuments aus der offiziellen Dokumentation von Oracle und in bestimmten Punkten aus einem damals hervorragenden Buch von Christian MAREE und Guy LEDANT: *SQL: Introduction, Programming, and Mastery*, erschienen bei EYROLLES. Meines Wissens ist dieses Buch nicht mehr im Druck. Die Autoren haben ein neues Buch verfasst, das ich noch nicht lesen konnte: *SQL 2: Einführung / Programmierung*.</p>
-<p>SQL (<em>Structured Query Language</em>) ist eine Standardsprache zum Erstellen, Verwalten und Abfragen relationaler Datenbanken. Sie ist weitgehend unabhängig vom verwendeten DBMS. Die Beispiele in diesem Dokument wurden zwar unter Verwendung des Firebird-DBMS geschrieben, die meisten lassen sich jedoch mit jedem relationalen DBMS nachstellen. Unter Windows stehen verschiedene DBMS zur Verfügung: Open-Source-Produkte wie MySQL, Postgres, Firebird und SQL Server 2005 sowie kommerzielle Produkte: Access, SQL Server und Oracle. Diese DBMS unterstützen alle die SQL-Sprache, wenn auch manchmal mit proprietären Abweichungen – oft Erweiterungen der Standard-SQL-Sprache.</p>
-<p>Das Firebird-DBMS wurde ausgewählt, da es die Möglichkeit bietet, eine Datenbank in einer einzigen Datei zu kapseln. Dies erleichtert es den Studierenden, diese Datei auf einem USB-Stick zu speichern, sodass sie sie auf ihren privaten Computern oder denen ihrer Schule oder Universität nutzen können.</p>
-<p>Dieses Dokument richtet sich an Anfänger oder diejenigen, die ihre SQL-Kenntnisse auffrischen möchten. Es erhebt keinen Anspruch darauf, SQL vollständig abzudecken. Programmierkonzepte (gespeicherte Prozeduren, SQL-Programmierung, SQL-API) werden beispielsweise nicht behandelt, ebenso wenig wie Themen im Zusammenhang mit der DBMS-Administration.</p>
-<p>Serge Tahé, Januar 2006</p>
+<h1 id="1-einfuhrung">1. <span style="color: #365f91">Einführung</span></h1>
+<p>Die PDF-Datei dieses Dokuments ist verfügbar |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQCbWs6xMBdwSqveJVcDiZJJAVUZuBLrJsp8QZaMhmuZDeg?e=VRrKee">HIER</a>|.</p>
+<p>Die Beispiele aus dem Dokument sind verfügbar |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQBn8EOWIXxGQawR8kcEhE8QAb6fjg8OZU9sRB8tHUsXCCk?e=ScrpRT">HIER</a>|.</p>
+<p>Dieses Dokument greift ein ähnliches Dokument aus dem Jahr 1991 für Oracle auf und passt es an SGBD Firebird an. Im Jahr 1991 stammte der Kern des Dokuments aus der offiziellen Dokumentation von ORACLE und in einigen Punkten aus einem damals hervorragenden Werk von Christian MAREE und Guy LEDANT: SQL „Einführung, Programmierung und Beherrschung“, erschienen bei EYROLLES. Meines Wissens ist dieses Buch nicht mehr erhältlich. Die Autoren haben ein neues Buch verfasst, das ich noch nicht lesen konnte: SQL „2: Einführung / Programmierung“.</p>
+<p>SQL (<em>Structured Query Language</em>) ist eine Standardsprache zur Erstellung, Pflege und Abfrage relationaler Datenbanken. Sie ist weitgehend unabhängig vom verwendeten SGBD. Auch wenn die Beispiele in diesem Dokument mit dem SGBD Firebird geschrieben wurden, lassen sie sich dennoch größtenteils mit jedem relationalen SGBD nachstellen. Unter Windows gibt es verschiedene SGBD: freie Produkte wie MySQL, Postgres, Firebird, SQL Express 2005 sowie kommerzielle Produkte: Access, SQL Server, Oracle. Diese Datenbanken unterstützen alle die SQL-Sprache, jedoch manchmal mit proprietären Varianten, oft in Form von Erweiterungen der Standard-SQL-Sprache.</p>
+<p>Firebird wurde ausgewählt, da es die Eigenschaft besitzt, eine Datenbank in einer einzigen Datei zu kapseln. Für Studierende ist es daher praktisch, diese Datei auf einen USB-Stick zu kopieren, um sie auf ihrem eigenen Computer oder auf den Computern ihrer Schule oder Universität zu nutzen.</p>
+<p>Dieses Dokument richtet sich an Anfänger oder Personen, die ihre Kenntnisse über SQL auffrischen möchten. Es erhebt keinen Anspruch darauf, SQL vollständig abzudecken. Programmierkonzepte (gespeicherte Prozeduren, SQL-Programmierung, API, SQL) werden beispielsweise ebenso wenig behandelt wie die Verwaltung eines SGBD.</p>
+<p><strong>Serge Tahé</strong>, Januar 2006</p>
 
 
 

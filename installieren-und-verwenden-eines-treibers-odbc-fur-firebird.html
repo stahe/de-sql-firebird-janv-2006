@@ -12,7 +12,7 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/de-sql-firebird-janv-2006/installation-und-verwendung-eines-odbc-treibers-fur-firebird.html">
+        <link rel="canonical" href="https://stahe.github.io/de-sql-firebird-janv-2006/installieren-und-verwenden-eines-treibers-odbc-fur-firebird.html">
       
       
         <link rel="prev" href="verwaltung-des-gleichzeitigen-zugriffs-auf-daten.html">
@@ -27,7 +27,7 @@
     
     
       
-        <title>8. Installation und Verwendung eines ODBC-Treibers für [Firebird] - Einführung in SQL mit dem DBMS Firebird</title>
+        <title>8. Installieren und Verwenden eines Treibers ODBC für [Firebird] - Einführung in SQL mit dem DBMS Firebird</title>
       
     
     
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#8-installation-und-verwendung-eines-odbc-treibers-fur-firebird" class="md-skip">
+        <a href="#8-installieren-und-verwenden-eines-treibers-odbc-fur-firebird" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              8. Installation und Verwendung eines ODBC-Treibers für [Firebird]
+              8. Installieren und Verwenden eines Treibers ODBC für [Firebird]
             
           </span>
         </div>
@@ -303,14 +303,14 @@
   
   
     <li class="md-nav__item">
-      <a href="einleitung.html" class="md-nav__link">
+      <a href="einfuhrung.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Einleitung
+    1. Einführung
   
 
     
@@ -384,14 +384,14 @@
   
   
     <li class="md-nav__item">
-      <a href="sql-ausdrucke.html" class="md-nav__link">
+      <a href="die-ausdrucke-der-sprache-sql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. SQL-Ausdrücke
+    4. Die Ausdrücke der Sprache SQL
   
 
     
@@ -438,14 +438,14 @@
   
   
     <li class="md-nav__item">
-      <a href="erweiterte-sql.html" class="md-nav__link">
+      <a href="vertiefung-der-sprache-sql.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Erweiterte SQL
+    6. Vertiefung der Sprache SQL
   
 
     
@@ -508,7 +508,7 @@
   <span class="md-ellipsis">
     
   
-    8. Installation und Verwendung eines ODBC-Treibers für [Firebird]
+    8. Installieren und Verwenden eines Treibers ODBC für [Firebird]
   
 
     
@@ -519,14 +519,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="installation-und-verwendung-eines-odbc-treibers-fur-firebird.html" class="md-nav__link md-nav__link--active">
+      <a href="installieren-und-verwenden-eines-treibers-odbc-fur-firebird.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Installation und Verwendung eines ODBC-Treibers für [Firebird]
+    8. Installieren und Verwenden eines Treibers ODBC für [Firebird]
   
 
     
@@ -552,10 +552,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#81-installation-des-treibers" class="md-nav__link">
+  <a href="#81-treiber-installieren" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.1. Installation des Treibers
+        8.1. Treiber installieren
       
     </span>
   </a>
@@ -563,10 +563,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#82-erstellen-sie-eine-odbc-datenquelle" class="md-nav__link">
+  <a href="#82-eine-quelle-odbc-erstellen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.2. Erstellen Sie eine ODBC-Datenquelle
+        8.2. Eine Quelle ODBC erstellen
       
     </span>
   </a>
@@ -574,10 +574,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#83-testen-sie-die-odbc-quelle" class="md-nav__link">
+  <a href="#83-testen-sie-die-quelle-odbc" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.3. Testen Sie die ODBC-Quelle
+        8.3. Testen Sie die Quelle ODBC
       
     </span>
   </a>
@@ -620,39 +620,39 @@
 
 
 
-<h1 id="8-installation-und-verwendung-eines-odbc-treibers-fur-firebird">8. <span style="color: #365f91">Installation und Verwendung eines ODBC-Treibers für [Firebird]</span></h1>
-<h2 id="81-installation-des-treibers">8.1. <span style="color: #4f81bd">Installation des Treibers</span></h2>
-<p>Es gibt viele Datenbanken auf dem Markt. Um den Datenbankzugriff unter MS Windows zu standardisieren, hat Microsoft eine Schnittstelle namens ODBC (Open DataBase Connectivity) entwickelt. Diese Schicht verbirgt die spezifischen Merkmale jeder Datenbank hinter einer Standardschnittstelle. Für MS Windows sind viele ODBC-Treiber verfügbar, die den Datenbankzugriff erleichtern. Hier sind zum Beispiel einige der ODBC-Treiber, die auf einem Windows XP-Rechner installiert sind: </p>
-<p><img src="images/10000000000001D10000015EA41092C7.png" width="372" height="280" style="width:9.841cm;height:7.407cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001D10000015EA41092C7.png" /></p>
-<p>Eine Anwendung, die auf diese Treiber setzt, kann jede Datenbank nutzen, ohne dass eine Neuprogrammierung erforderlich ist. Der ODBC-Treiber fungiert als Vermittler zwischen der Anwendung und dem DBMS. Die Schnittstelle zwischen Anwendung und ODBC-Treiber ist standardisiert. Wenn Sie das DBMS wechseln, installieren Sie einfach den ODBC-Treiber für das neue DBMS, und die Anwendung bleibt unverändert.</p>
+<h1 id="8-installieren-und-verwenden-eines-treibers-odbc-fur-firebird">8. <span style="color: #365f91">Installieren und Verwenden eines Treibers ODBC für [Firebird]</span></h1>
+<h2 id="81-treiber-installieren">8.1. <span style="color: #4f81bd">Treiber installieren</span></h2>
+<p>Es gibt zahlreiche Datenbanken auf dem Markt. Um den Zugriff auf Datenbanken unter MS Windows zu vereinheitlichen, hat Microsoft eine Schnittstelle namens ODBC (Open DataBase Connectivity) entwickelt. Diese Schicht verbirgt die Besonderheiten der einzelnen Datenbanken hinter einer Standardschnittstelle. Unter Windows gibt es zahlreiche Treiber, die den Zugriff auf Datenbanken erleichtern. Hier sind beispielsweise einige der auf einem Windows-Rechner installierten Treiber: </p>
+<p><img src="images/10000000000001D10000015EA41092C7.png" width="372" height="280" style="width:9.841cm;height:7.41cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001D10000015EA41092C7.png" /></p>
+<p>Eine Anwendung, die auf diesen Treibern basiert, kann jede beliebige Datenbank nutzen, ohne dass eine Neuprogrammierung erforderlich ist. Der Treiber ODBC fungiert als Vermittler zwischen der Anwendung und der Datenbank. Die Kommunikation zwischen der Anwendung und dem Treiber ODBC ist standardmäßig eingerichtet. Wenn man von SGBD wechselt, wird der Treiber ODBC des neuen SGBD installiert, und die Anwendung bleibt unverändert.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000489000000C4DC1F7C74.png" width="581" height="98" style="display:inline-block; margin:4px;width:15.36cm;height:2.593cm;" class="odt-zoomable" data-zoom-src="images/1000000000000489000000C4DC1F7C74.png" /></td></tr></table>
 
-<p>Über den Link [firebird-odbc-provider] auf der [Firebird]-Downloadseite (Abschnitt<a href="#firebird"><u><span style="color: #0563c1"> 2.1</span></u></a>) erhalten Sie Zugriff auf einen ODBC-Treiber. Nach der Installation erscheint dieser in der Liste der installierten ODBC-Treiber.</p>
-<h2 id="82-erstellen-sie-eine-odbc-datenquelle">8.2. <span style="color: #4f81bd">Erstellen Sie eine ODBC-Datenquelle</span></h2>
+<p>Der Link [firebird-odbc-provider] auf der Download-Seite von [Firebird] (Absatz<a href="firebird-tutorial.html#firebird"><u><span style="color: #0563c1"> 2.1</span></u></a>) führt zu einem Treiber ODBC. Sobald dieser installiert ist, erscheint er in der Liste der installierten Treiber ODBC.</p>
+<h2 id="82-eine-quelle-odbc-erstellen">8.2. <span style="color: #4f81bd">Eine Quelle ODBC erstellen</span></h2>
 <ul>
-  <li>Starten Sie das Tool [Start -&gt; Einstellungen -&gt; Konfigurationstool -&gt; Verwaltung -&gt; ODBC-Datenquellen]:
+  <li>Starten Sie das Tool [Démarrer -&gt; Paramètres -&gt; Outil de configuration -&gt; Outils d&#x27;administration -&gt; Sources de données ODBC]:
   </li>
 </ul>
 
-<p><img src="images/10000000000002300000004F5D5AC060.png" width="392" height="55" style="width:10.363cm;height:1.462cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002300000004F5D5AC060.png" /></p>
+<p><img src="images/10000000000002300000004F5D5AC060.png" width="392" height="55" style="width:10.363cm;height:1.457cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002300000004F5D5AC060.png" /></p>
 <ul>
-  <li>Das folgende Fenster wird angezeigt:
+  <li>Es erscheint das folgende Fenster:
   </li>
 </ul>
 
-<p><img src="images/10000000000001C9000000A624EE6794.png" width="320" height="116" style="width:8.456cm;height:3.073cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C9000000A624EE6794.png" /></p>
+<p><img src="images/10000000000001C9000000A624EE6794.png" width="320" height="116" style="width:8.456cm;height:3.062cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C9000000A624EE6794.png" /></p>
 <ul>
-  <li>Klicken Sie auf [Hinzufügen], um eine neue Systemdatenquelle (im Bereich [System-DSN]) hinzuzufügen, die wir mit der Firebird-Datenbank [dbarticles] verknüpfen, die wir in Abschnitt<a href="#dbarticles"><u><span style="color: #0563c1"> 2.3</span></u></a> erstellt haben:
+  <li>Fügen wir mit [Add] eine neue Systemdatenquelle hinzu (Bedienfeld [System DSN]), die wir der Firebird-Datenbank [dbarticles] zuordnen, die wir in Abschnitt<a href="firebird-tutorial.html#dbarticles"><u><span style="color: #0563c1"> 2.3</span></u></a> erstellt haben:
   </li>
 </ul>
 
-<p><img src="images/10000000000001C0000000908EA3F24F.png" width="314" height="101" style="width:8.299cm;height:2.669cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C0000000908EA3F24F.png" /></p>
+<p><img src="images/10000000000001C0000000908EA3F24F.png" width="314" height="101" style="width:8.299cm;height:2.667cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C0000000908EA3F24F.png" /></p>
 <ul>
-  <li>Zunächst müssen wir den zu verwendenden ODBC-Treiber angeben. Oben wählen wir den Treiber für Firebird aus und klicken dann auf [Fertigstellen]. Der Firebird-ODBC-Treiber-Assistent übernimmt dann die weitere Bearbeitung:
+  <li>Zunächst müssen wir den zu verwendenden Treiber ODBC angeben. Oben wählen wir den Treiber für Firebird aus und geben dann [Terminer] ein. Der Treiber-Assistent für Firebird (ODBC) übernimmt nun die Steuerung:
   </li>
 </ul>
 
-<p><img src="images/10000000000001680000015EDB63A521.png" width="252" height="245" style="width:6.664cm;height:6.479cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001680000015EDB63A521.png" /></p>
+<p><img src="images/10000000000001680000015EDB63A521.png" width="252" height="245" style="width:6.664cm;height:6.477cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001680000015EDB63A521.png" /></p>
 <ul>
   <li>Wir füllen die verschiedenen Felder aus:
   </li>
@@ -662,157 +662,159 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>DSN [demo-odbc-firebird]
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">der DSN-Name der ODBC-Quelle – kann beliebig sein</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Datenbank [D:\..\DBARTICLES.GDB]
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">Der Name DSN der Quelle ODBC – kann beliebig sein</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Database [D:\..\DBARTICLES.GDB]
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">Der Name der zu verwendenden Firebird-Datenbank – verwenden Sie [Durchsuchen], um die entsprechende .gbd-Datei auszuwählen. Hier verwenden wir die auf Seite<a href="#dbarticles"><u><span style="color: #0563c1"> 8</span></u></a> erstellte Datenbank [dbarticles].</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Datenbankkonto [SYSDBA]
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">Der Name der zu verarbeitenden Firebird-Datenbank BD – verwenden Sie [Browse], um die entsprechende .gbd-Datei anzugeben. Wir verwenden hier die auf Seite<a href="firebird-tutorial.html#dbarticles"><u><span style="color: #0563c1"> 8</span></u></a> erstellte Artikeldatenbank [dbarticles].</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Database Account [SYSDBA]
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">Der Benutzername, der für die Verbindung zur Datenbank verwendet werden soll</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Passwort [masterkey]
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">Benutzername für die Anmeldung an der Datenbank</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Password [masterkey]
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">das zu diesem Benutzernamen gehörende Passwort</div></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">das zu dieser Kennung gehörende Passwort</div></td></tr></table>
 
-<p>Mit der Schaltfläche [Verbindung testen] können Sie die Richtigkeit der eingegebenen Informationen überprüfen. Starten Sie vor der Verwendung das DBMS [Firebird]:</p>
-<p><img src="images/100000000000010E000000715EB8CF57.png" width="189" height="79" style="width:4.997cm;height:2.09cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000010E000000715EB8CF57.png" /></p>
+<p>Mit der Schaltfläche „[Test connection]“ können Sie die Gültigkeit der von uns eingegebenen Informationen überprüfen. Bevor Sie diese verwenden, starten Sie bitte „SGBD“ und „[Firebird]“:</p>
+<p><img src="images/100000000000010E000000715EB8CF57.png" width="189" height="79" style="width:4.997cm;height:2.081cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000010E000000715EB8CF57.png" /></p>
 <ul>
-  <li>Bestätigen Sie den ODBC-Assistenten, indem Sie so oft wie nötig auf [OK] klicken
-  </li>
-</ul>
-<p><a id="testersourceodbc"></a></p>
-<h2 id="83-testen-sie-die-odbc-quelle">8.3. <span style="color: #4f81bd">Testen Sie die ODBC-Quelle</span></h2>
-<p>Es gibt verschiedene Möglichkeiten, um zu überprüfen, ob eine ODBC-Quelle ordnungsgemäß funktioniert. Hier verwenden wir Excel:</p>
-<p><img src="images/10000000000002FE0000011C4766F8B1.png" width="536" height="199" style="width:14.183cm;height:5.258cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002FE0000011C4766F8B1.png" /></p>
-<ul>
-  <li>Verwenden Sie die oben genannte Option [Daten -&gt; Externe Daten -&gt; Abfrage erstellen]. Dadurch wird das erste Fenster des Assistenten zur Definition der Datenquelle geöffnet. Im Bereich [Datenbanken] werden die derzeit auf dem Rechner definierten ODBC-Quellen aufgelistet:
+  <li>Bestätigen Sie den Assistenten ODBC, indem Sie [OK] so oft wie nötig ausführen
   </li>
 </ul>
 
-<p><img src="images/10000000000001C40000008759047E8D.png" width="362" height="108" style="width:9.569cm;height:2.858cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C40000008759047E8D.png" /></p>
+<p><span id="testersourceodbc" name="testersourceodbc" class="odt-bookmark-anchor"></span></p>
+<h2 id="83-testen-sie-die-quelle-odbc">8.3. <span style="color: #4f81bd">Testen Sie die Quelle ODBC</span></h2>
+<p>Es gibt verschiedene Möglichkeiten, die korrekte Funktion einer Quelle ODBC zu überprüfen. Wir verwenden hier Excel:</p>
+<p><img src="images/10000000000002FE0000011C4766F8B1.png" width="536" height="199" style="width:14.183cm;height:5.253cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002FE0000011C4766F8B1.png" /></p>
 <ul>
-  <li>Wählen Sie die soeben erstellte ODBC-Quelle [odbc-firebird-articles] aus und fahren Sie mit dem nächsten Schritt fort, indem Sie auf [OK] klicken:
+  <li>Verwenden wir die oben genannte Option [Données -&gt; Données externes -&gt; Créer une requête]. Es erscheint das erste Fenster eines Assistenten zur Definition der Datenquelle. Im Bereich [Bases de données] werden die derzeit auf dem Rechner definierten Quellen ODBC aufgelistet:
   </li>
 </ul>
 
-<p><img src="images/10000000000001A8000000BBB5B02067.png" width="296" height="131" style="width:7.844cm;height:3.461cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A8000000BBB5B02067.png" /></p>
+<p><img src="images/10000000000001C40000008759047E8D.png" width="362" height="108" style="width:9.569cm;height:2.854cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C40000008759047E8D.png" /></p>
 <ul>
-  <li>In diesem Fenster werden die in der ODBC-Quelle verfügbaren Tabellen und Spalten aufgelistet. Wir wählen die gesamte Tabelle aus:
+  <li>Wählen wir die soeben erstellte Quelle ODBC [odbc-firebird-articles] aus und fahren wir mit [OK] zum nächsten Schritt fort:
   </li>
 </ul>
 
-<p><img src="images/10000000000001A1000000A4D05B6723.png" width="292" height="115" style="width:7.717cm;height:3.036cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A1000000A4D05B6723.png" /></p>
+<p><img src="images/10000000000001A8000000BBB5B02067.png" width="296" height="131" style="width:7.844cm;height:3.459cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A8000000BBB5B02067.png" /></p>
 <ul>
-  <li>Fahren Sie mit dem nächsten Schritt fort, indem Sie auf [Weiter] klicken:
+  <li>Dieses Fenster listet die in der Quelle ODBC verfügbaren Tabellen und Spalten auf. Wir wählen die gesamte Tabelle aus:
   </li>
 </ul>
 
-<p><img src="images/10000000000001A9000000A390F267F9.png" width="297" height="114" style="width:7.863cm;height:3.016cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A9000000A390F267F9.png" /></p>
+<p><img src="images/10000000000001A1000000A4D05B6723.png" width="292" height="115" style="width:7.717cm;height:3.03cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A1000000A4D05B6723.png" /></p>
 <ul>
-  <li>In diesem Schritt können wir die Daten filtern. Hier werden wir jedoch keine Filter anwenden und zum nächsten Schritt übergehen:
+  <li>Fahren wir mit dem nächsten Schritt mit [Suivant] fort:
   </li>
 </ul>
 
-<p><img src="images/10000000000001760000008A11A9838F.png" width="262" height="97" style="width:6.925cm;height:2.556cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001760000008A11A9838F.png" /></p>
+<p><img src="images/10000000000001A9000000A390F267F9.png" width="297" height="114" style="width:7.863cm;height:3.018cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001A9000000A390F267F9.png" /></p>
 <ul>
-  <li>In diesem Schritt können wir die Daten sortieren. Wir werden dies nicht tun und fahren mit dem nächsten Schritt fort:
+  <li>In diesem Schritt können wir die Daten filtern. Hier filtern wir nichts und fahren mit dem nächsten Schritt fort:
   </li>
 </ul>
 
-<p><img src="images/10000000000001F10000009660A83120.png" width="347" height="105" style="width:9.193cm;height:2.775cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F10000009660A83120.png" /></p>
+<p><img src="images/10000000000001760000008A11A9838F.png" width="262" height="97" style="width:6.925cm;height:2.554cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001760000008A11A9838F.png" /></p>
 <ul>
-  <li>Im letzten Schritt werden wir gefragt, was wir mit den Daten machen möchten. Hier exportieren wir sie nach Excel:
+  <li>In diesem Schritt können wir die Daten sortieren. Wir verzichten darauf und fahren mit dem nächsten Schritt fort:
   </li>
 </ul>
 
-<p><img src="images/1000000000000174000000A73256E8B1.png" width="260" height="117" style="width:6.888cm;height:3.092cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000174000000A73256E8B1.png" /></p>
+<p><img src="images/10000000000001F10000009660A83120.png" width="347" height="105" style="width:9.193cm;height:2.773cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F10000009660A83120.png" /></p>
 <ul>
-  <li>Hier fragt Excel, wo wir die abgerufenen Daten ablegen möchten. Wir legen sie im aktiven Arbeitsblatt beginnend mit Zelle A1 ab. Die Daten werden dann im Excel-Arbeitsblatt angezeigt:
+  <li>Im letzten Schritt werden wir gefragt, was wir mit den Daten machen möchten. Hier leiten wir sie an Excel weiter:
   </li>
 </ul>
 
-<p><img src="images/1000000000000163000000569C910E63.png" width="284" height="69" style="width:7.507cm;height:1.819cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000163000000569C910E63.png" /></p>
-<p>Es gibt noch andere Möglichkeiten, die Gültigkeit einer ODBC-Quelle zu testen. Sie können beispielsweise die kostenlose OpenOffice-Suite verwenden, die unter [<a href="http://www.openoffice.org/"><u><span style="color: #0563c1">http://www.openoffice.org</span></u></a>] verfügbar ist. Hier ist ein Beispiel mit OpenOffice Text:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000194000000A116CB2AF7.png" width="283" height="113" style="display:inline-block; margin:4px;width:7.475cm;height:2.979cm;" class="odt-zoomable" data-zoom-src="images/1000000000000194000000A116CB2AF7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000015400000082E88D5673.png" width="238" height="91" style="display:inline-block; margin:4px;width:6.297cm;height:2.408cm;" class="odt-zoomable" data-zoom-src="images/100000000000015400000082E88D5673.png" /></td></tr></table>
-
+<p><img src="images/1000000000000174000000A73256E8B1.png" width="260" height="117" style="width:6.888cm;height:3.085cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000174000000A73256E8B1.png" /></p>
 <ul>
-  <li>Über ein Symbol auf der linken Seite des OpenOffice-Fensters gelangen Sie zu den Datenquellen. Die Benutzeroberfläche wechselt daraufhin und zeigt einen Bereich zur Verwaltung der Datenquellen an:
+  <li>Hier fragt Excel, wo die abgerufenen Daten gespeichert werden sollen. Wir speichern sie im aktiven Arbeitsblatt ab der Zelle A1. Die Daten werden dann in das Excel-Arbeitsblatt übernommen:
   </li>
 </ul>
 
-<p><img src="images/1000000000000117000000D40479A691.png" width="195" height="148" style="width:5.154cm;height:3.916cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000117000000D40479A691.png" /></p>
+<p><img src="images/1000000000000163000000569C910E63.png" width="284" height="69" style="width:7.507cm;height:1.815cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000163000000569C910E63.png" /></p>
+<p>Es gibt weitere Möglichkeiten, die Gültigkeit einer Quelle wie ODBC zu überprüfen. Man kann beispielsweise die kostenlose Suite OpenOffice verwenden, die unter der URL [http://www.openoffice.org] verfügbar ist. Hier ein Beispiel mit einem Text OpenOffice:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/1000000000000194000000A116CB2AF7.png" width="283" height="112" style="display:inline-block; margin:4px;width:7.475cm;height:2.97cm;" class="odt-zoomable" data-zoom-src="images/1000000000000194000000A116CB2AF7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000015400000082E88D5673.png" width="238" height="91" style="display:inline-block; margin:4px;width:6.297cm;height:2.402cm;" class="odt-zoomable" data-zoom-src="images/100000000000015400000082E88D5673.png" /></td></tr></table>
+
 <ul>
-  <li>Eine Datenquelle ist vordefiniert: die Quelle [Bibliografie]. Durch einen Rechtsklick auf den Datenquellenbereich können wir über die Option [Datenquellen verwalten] eine neue Datenquelle erstellen:
+  <li>Über ein Symbol auf der linken Seite des Fensters von OpenOffice gelangt man zu den Datenquellen. Die Benutzeroberfläche ändert sich daraufhin und zeigt einen Bereich zur Verwaltung der Datenquellen an:
   </li>
 </ul>
 
-<p><img src="images/100000000000011F0000009AA3A7F501.png" width="200" height="108" style="width:5.304cm;height:2.845cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000011F0000009AA3A7F501.png" /></p>
+<p><img src="images/1000000000000117000000D40479A691.png" width="195" height="148" style="width:5.154cm;height:3.923cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000117000000D40479A691.png" /></p>
 <ul>
-  <li>Ein Assistent zur [Datenquellenverwaltung] ermöglicht es Ihnen, Datenquellen zu erstellen. Durch einen Rechtsklick auf den Datenquellenbereich können Sie über die Option [Neue Datenquelle] eine neue Datenquelle erstellen: 
+  <li>Eine Datenquelle ist vordefiniert: die Quelle [Bibliography]. Mit einem Rechtsklick auf den Bereich „Datenquellen“ können wir über die Option [Gérer les sources de données] eine neue Datenquelle anlegen:
   </li>
 </ul>
 
-<p><img src="images/100000000000021400000095EE775B91.png" width="372" height="104" style="width:9.846cm;height:2.759cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000021400000095EE775B91.png" /></p>
+<p><img src="images/100000000000011F0000009AA3A7F501.png" width="200" height="107" style="width:5.304cm;height:2.843cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000011F0000009AA3A7F501.png" /></p>
+<ul>
+  <li>Ein Assistent ([Gestion des sources de données]) ermöglicht das Anlegen von Datenquellen. Mit einem Rechtsklick auf den Bereich „Datenquellen“ können wir eine neue Datenquelle mit der Option [Nouvelle source de données] anlegen: 
+  </li>
+</ul>
+
+<p><img src="images/100000000000021400000095EE775B91.png" width="372" height="104" style="width:9.846cm;height:2.753cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000021400000095EE775B91.png" /></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Name [odbc-firebird-articles]
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Nom [odbc-firebird-articles]
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">Beliebiger Name. Hier haben wir den Namen der ODBC-Quelle verwendet</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Datenbanktyp [odbc]
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">ein beliebiger Name. Hier wurde der Name der Quelle ODBC übernommen</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Type de BD [odbc]
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">OpenOffice kann verschiedene Datenbanktypen über JDBC, ODBC oder direkt (MySQL, Dbase usw.) verarbeiten. Wählen Sie für unser Beispiel „ODBC“</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Datenquellen-URL
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">OpenOffice kann verschiedene Arten von BD über JDBC, ODBC oder direkt (MySQL, Dbase, ...) verarbeiten. Für unser Beispiel muss ODBC ausgewählt werden.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>URL de la source de données
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">Über die Schaltfläche rechts neben dem Eingabefeld gelangen wir zur Liste der ODBC-Quellen auf dem Rechner. Wir wählen die Quelle [odbc-firebird-articles] aus</div></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">Über die Schaltfläche rechts neben dem Eingabefeld gelangen wir zur Liste der ODBC-Quellen des Geräts. Wir wählen die Quelle [odbc-firebird-articles] aus</div></td></tr></table>
 
 <ul>
-  <li>Wir wechseln zum [ODBC]-Fenster, um den Benutzer zu definieren, unter dessen Anmeldedaten die Verbindung hergestellt werden soll:
+  <li>Wir wechseln zum Fenster [ODBC], um dort den Benutzer festzulegen, unter dessen Identität die Anmeldung erfolgen soll:
   </li>
 </ul>
 
-<p><img src="images/100000000000015200000063E39E08E9.png" width="270" height="79" style="width:7.149cm;height:2.094cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000015200000063E39E08E9.png" /></p>
+<p><img src="images/100000000000015200000063E39E08E9.png" width="270" height="79" style="width:7.149cm;height:2.099cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000015200000063E39E08E9.png" /></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div markdown="block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Benutzername [sysdba]
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Nom d&#39;utilisateur [sysdba]
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">Der Eigentümer der ODBC-Quelle</div></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">Der Eigentümer der Quelle ODBC</div></td></tr></table>
 
 <ul>
-  <li>Wechseln Sie zum Bereich [Tabellen]. Sie werden zur Eingabe des Passworts aufgefordert. Hier lautet es [masterkey]:
+  <li>Wir wechseln zum Fenster [Tables]. Das Passwort wird abgefragt. Hier lautet es [masterkey]:
   </li>
 </ul>
 
 <p><img src="images/1000000000000219000000AE62FFF4E4.png" width="376" height="122" style="width:9.936cm;height:3.219cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000219000000AE62FFF4E4.png" /></p>
 <ul>
-  <li>Klicken Sie auf [OK]. Daraufhin wird die Liste der Tabellen in der ODBC-Quelle angezeigt:
+  <li>Man gibt [OK] ein. Daraufhin wird die Liste der Tabellen der Quelle ODBC angezeigt:
   </li>
 </ul>
 
-<p><img src="images/100000000000010D0000008F52BA0B8E.png" width="188" height="100" style="width:4.972cm;height:2.642cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000010D0000008F52BA0B8E.png" /></p>
+<p><img src="images/100000000000010D0000008F52BA0B8E.png" width="188" height="100" style="width:4.972cm;height:2.644cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000010D0000008F52BA0B8E.png" /></p>
 <ul>
-  <li>Sie können die Tabellen auswählen, die im [OpenOffice]-Dokument angezeigt werden sollen. Hier wählen wir die Tabelle [ARTICLES] aus und klicken auf [OK]. Die Definition der Datenquelle ist damit abgeschlossen. Sie erscheint nun in der Liste der Datenquellen für das aktive Dokument:
+  <li>Man kann die Tabellen festlegen, die im Dokument [OpenOffice] angezeigt werden sollen. Hier wählen wir die Tabelle [ARTICLES] aus und geben [OK] ein. Die Definition der Datenquelle ist damit abgeschlossen. Sie erscheint nun in der Liste der Datenquellen des aktiven Dokuments:
   </li>
 </ul>
 
-<p><img src="images/100000000000029D000000E23B22A499.png" width="468" height="158" style="width:12.386cm;height:4.184cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000029D000000E23B22A499.png" /></p>
+<p><img src="images/100000000000029D000000E23B22A499.png" width="468" height="158" style="width:12.386cm;height:4.18cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000029D000000E23B22A499.png" /></p>
 <ul>
-  <li>Sie können die Tabelle [ARTICLES] mit der Maus aus der Liste in das [OpenOffice]-Dokument ziehen.
+  <li>Man kann die Tabelle [ARTICLES] mit der Maus in den Text [OpenOffice] ziehen.
   </li>
 </ul>
+
 <h2 id="84-microsoft-query">8.4. <span style="color: #4f81bd">Microsoft Query</span></h2>
-<p>Obwohl MS Query im Lieferumfang von MS Office enthalten ist, gibt es nicht immer eine Verknüpfung zu diesem Programm. Es befindet sich im <em>Office</em>-Ordner von MS Office unter dem Namen <em>MSQRY32.EXE</em>. Zum Beispiel<em>: „C:\Programme\Office 2000\Office\MSQRY32.EXE</em>“. Mit MS Query können Sie jede ODBC-Datenquelle mithilfe von SQL-Abfragen abfragen. Diese können grafisch erstellt oder direkt über die Tastatur eingegeben werden. Da die meisten Windows-Datenbanken ODBC-Treiber bereitstellen, können sie alle mit MS Query abgefragt werden. Beim Starten von MS Query erscheint der folgende Bildschirm:</p>
-<p><img src="images/10000000000001C70000006854343211.png" width="364" height="83" style="width:9.631cm;height:2.201cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C70000006854343211.png" /></p>
-<p>Zunächst müssen wir die abzufragende ODBC-Datenquelle angeben. Verwenden Sie dazu die Option: <em>Datei/Neu</em>:</p>
-<p><img src="images/10000000000001C7000000ED130998F5.png" width="364" height="190" style="width:9.631cm;height:5.017cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C7000000ED130998F5.png" /></p>
-<p>Wir verwenden die zuvor erstellte ODBC-Quelle. MS Query zeigt dann die Struktur der Quelle an:</p>
-<p><img src="images/10000000000001EE000001324CD8E8A3.png" width="347" height="215" style="width:9.19cm;height:5.694cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001EE000001324CD8E8A3.png" /></p>
-<p>Wir klicken auf die Schaltfläche [Abbrechen], da der Assistent nicht besonders nützlich ist, wenn man sich mit SQL auskennt. Über die Option [Datei / SQL ausführen] können wir SQL-Abfragen auf die ausgewählte ODBC-Quelle anwenden:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000000AD000000A9FCF375CC.png" width="138" height="135" style="display:inline-block; margin:4px;width:3.66cm;height:3.575cm;" class="odt-zoomable" data-zoom-src="images/10000000000000AD000000A9FCF375CC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000016100000145581A5704.png" width="282" height="260" style="display:inline-block; margin:4px;width:7.47cm;height:6.877cm;" class="odt-zoomable" data-zoom-src="images/100000000000016100000145581A5704.png" /></td></tr></table>
+<p>Obwohl MS Query im Lieferumfang von MS Office enthalten ist, gibt es nicht immer einen Verweis auf dieses Programm. Es befindet sich im Ordner von <em>Office</em> von MS Office unter dem Namen <em>MSQRY32.EXE</em>. Zum Beispiel <em>„C:\Program Files\Office 2000\Office\MSQRY32.EXE</em>“. Mit MS Query lassen sich alle ODBC-Datenquellen mit SQL-Abfragen abfragen. Diese können grafisch erstellt oder direkt über die Tastatur eingegeben werden. Da die meisten Datenbanken für Windows Treiber bereitstellen, können sie alle mit MS Query abgefragt werden. Beim Start von MS Query erscheint folgende Ansicht:</p>
+<p><img src="images/10000000000001C70000006854343211.png" width="364" height="83" style="width:9.631cm;height:2.2cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C70000006854343211.png" /></p>
+<p>Zunächst müssen wir die Datenquelle ODBC angeben, die abgefragt werden soll. Dazu verwenden wir die Option: <em>Fichier/Nouvelle</em>:</p>
+<p><img src="images/10000000000001C7000000ED130998F5.png" width="364" height="190" style="width:9.631cm;height:5.02cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C7000000ED130998F5.png" /></p>
+<p>Wir verwenden die zuvor angelegte Quelle ODBC. MS Query zeigt uns daraufhin die Struktur der Quelle an:</p>
+<p><img src="images/10000000000001EE000001324CD8E8A3.png" width="347" height="215" style="width:9.19cm;height:5.69cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001EE000001324CD8E8A3.png" /></p>
+<p>Wir verwenden die Schaltfläche [Annuler], da der vorgeschlagene Assistent kaum nützlich ist, wenn man die Sprache SQL beherrscht. Wir können mit der Option [Fichier / Exécuter SQL] Abfragen SQL für die ausgewählte Quelle ODBC ausführen:</p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000000AD000000A9FCF375CC.png" width="138" height="135" style="display:inline-block; margin:4px;width:3.66cm;height:3.581cm;" class="odt-zoomable" data-zoom-src="images/10000000000000AD000000A9FCF375CC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/100000000000016100000145581A5704.png" width="282" height="260" style="display:inline-block; margin:4px;width:7.47cm;height:6.879cm;" class="odt-zoomable" data-zoom-src="images/100000000000016100000145581A5704.png" /></td></tr></table>
 
-<p>Wir werden aufgefordert, die ODBC-Quelle erneut auszuwählen:</p>
-<p><img src="images/10000000000001C5000000994E49CD26.png" width="362" height="122" style="width:9.59cm;height:3.239cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C5000000994E49CD26.png" /></p>
-<p>Sobald die ODBC-Quelle ausgewählt ist, können wir SQL-Befehle darauf ausführen:</p>
+<p>Wir müssen nun erneut die Quelle ODBC auswählen:</p>
+<p><img src="images/10000000000001C5000000994E49CD26.png" width="362" height="122" style="width:9.59cm;height:3.24cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001C5000000994E49CD26.png" /></p>
+<p>Sobald die Quelle ODBC ausgewählt ist, können wir Befehle SQL darauf ausführen:</p>
 <p><img src="images/100000000000015F0000011233BE3562.png" width="281" height="219" style="width:7.43cm;height:5.8cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000015F0000011233BE3562.png" /></p>
 <p>Wir erhalten das folgende Ergebnis:</p>
-<p><img src="images/10000000000001570000012E8FF0D252.png" width="274" height="242" style="width:7.26cm;height:6.392cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001570000012E8FF0D252.png" /></p>
-<p>Der Leser ist eingeladen, eine ODBC-Quelle mit der Firebird-Datenbank DBBIBLIO anzulegen und die vorangegangenen Beispiele zu wiederholen.</p>
+<p><img src="images/10000000000001570000012E8FF0D252.png" width="274" height="242" style="width:7.26cm;height:6.391cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001570000012E8FF0D252.png" /></p>
+<p>Der Leser wird gebeten, eine Quelle ODBC mit der Firebird-Datenbank DBBIBLIO anzulegen und die vorherigen Beispiele erneut auszuführen.</p>
 
 
 
